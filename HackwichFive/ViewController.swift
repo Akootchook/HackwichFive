@@ -7,27 +7,25 @@
 import UIKit
 
 
-var favoriteFoodsArray : [String]
-
-currentIndex = [0]
-
 
 class ViewController: UIViewController {
+    
+    var currentIndex = 0
+    
+    var favoriteFoodsArray = ["Muktuk", "Tuttu", "frybread", "kiniqtaq", "lilikoi"]
+    
     @IBOutlet weak var topLabel: UILabel!
-    
-    
     @IBOutlet weak var bottomLabel: UILabel!
 
     @IBAction func buttonPressed(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.topLabel.text = "My favorite foods"
-
-       favoriteFoodsArray = ["Muktuk", "Tuttu", "frybread", "kiniqtaq", "lilikoi"]
-
-  
+       
+        topLabel.text = "My favorite foods"
         
+        
+        bottomLabel.text = favoriteFoodsArray[currentIndex]
         // Do any additional setup after loading the view.
     }
 
